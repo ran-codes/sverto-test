@@ -1,6 +1,7 @@
 # quarto backend folder
 /.quarto/
-
+/_site/
+/_freeze/
 # .sverto directory (except rollup.config.js)
 /.sverto/import
 /.sverto/.sverto-*
