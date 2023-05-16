@@ -1,2 +1,4 @@
 project:
   type: website
+  pre-render:
+    - test.ts
