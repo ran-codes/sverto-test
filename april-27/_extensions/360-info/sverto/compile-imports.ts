@@ -7,7 +7,12 @@ const rollupConfig = path.join(path.dirname(thisScript), "rollup.config.js");
 
 // call rollup with the config file
 const cmd = ["npm", "run", "build", rollupConfig];
-const compileStep = Deno.run({ cmd });
+const compileStep = Deno.run({
+  cmd,
+  env: {
+    "Path": Deno.env.get("Path")
+  }
+});
 await compileStep.status();
 
 // console.log("Svelte compilation + bundling done!");
