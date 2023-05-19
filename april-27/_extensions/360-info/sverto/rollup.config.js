@@ -10,9 +10,9 @@ const path = require('node:path');
 const production = !process.env.ROLLUP_WATCH;
 
 // get quarto project output directory and list of inputs
-const quartoOutDir = fs.readFileSync('.sverto/.sverto-outdir', 'utf8');
+const quartoOutDir = fs.readFileSync('./.sverto/.sverto-outdir', 'utf8');
 
-const svelteImportListPath = '.sverto/.sverto-imports';
+const svelteImportListPath = './.sverto/.sverto-imports';
 
 // skip svelte compilation if there's nothing to compile
 if (!fs.existsSync(svelteImportListPath)) {
